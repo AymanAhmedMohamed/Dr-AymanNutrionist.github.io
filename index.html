@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#087f5b">
+  <meta id="metaDescription" name="description" content="">
+  <meta name="keywords" content="Dr Ayman Nutritionist, تغذية علاجية, تغذية صحية, BMI, السعرات الحرارية, البروتين">
+  <title id="siteTitle"></title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#home" aria-label="Dr.Ayman Nutritionist">
+      <span class="brand-mark">DA</span>
+      <span><b id="brandDoctor">Dr.Ayman</b><small id="brandSite">Nutritionist</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">☰</button>
+    <nav id="mainNav">
+      <a href="#home">الرئيسية</a>
+      <a href="#about">عن الموقع</a>
+      <a href="#conditions">التغذية العلاجية</a>
+      <a href="#tools">الحاسبات</a>
+      <a href="#articles">المقالات</a>
+      <a href="#faq">الأسئلة الشائعة</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow" id="heroBadge"></span>
+      <h1><span id="heroTitle"></span> <span id="heroHighlight"></span></h1>
+      <p class="lead" id="heroText"></p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#conditions">استكشف المحتوى</a>
+        <a class="btn btn-light" href="#tools">استخدم الحاسبات</a>
+      </div>
+      <div class="trust-row"><span>✓ مجاني للجميع</span><span>✓ عربي ومتجاوب</span><span>✓ محتوى تثقيفي</span></div>
+    </div>
+    <div class="hero-art">
+      <img src="assets/hero-nutrition.svg" alt="رسم توضيحي للتغذية الصحية">
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid" id="statsGrid"></div>
+</section>
+
+<section class="section" id="about">
+  <div class="container two-col">
+    <div>
+      <span class="section-tag" id="aboutTag"></span>
+      <h2 id="aboutTitle"></h2>
+      <p id="aboutText"></p>
+      <div class="check-list" id="aboutPoints"></div>
+    </div>
+    <div class="about-card"><img src="assets/healthy-plate.svg" alt="طبق غذائي متوازن"></div>
+  </div>
+</section>
+
+<section class="section soft" id="conditions">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-tag">التغذية العلاجية</span>
+      <h2>موضوعات يمكنك البدء بها</h2>
+      <p>معلومات عامة للتثقيف وليست وصفات علاجية شخصية.</p>
+    </div>
+    <div class="cards-grid" id="conditionsGrid"></div><h3>إدارة الوزن</h3><p>مبادئ التحكم في الوزن، تنظيم الوجبات، الحركة اليومية والعادات المستدامة.</p></article>
+      <article class="info-card"><div class="card-icon">🩸</div><h3>السكري</h3><p>مفاهيم عامة عن توزيع الوجبات، الكربوهيدرات واختيار الأطعمة.</p></article>
+      <article class="info-card"><div class="card-icon">❤️</div><h3>صحة القلب</h3><p>التوازن الغذائي، الدهون الغذائية، الألياف وتقليل الإفراط في الصوديوم.</p></article>
+      <article class="info-card"><div class="card-icon">🧂</div><h3>ضغط الدم</h3><p>توعية عامة حول الصوديوم، نمط الغذاء الصحي والعادات المساندة.</p></article>
+      <article class="info-card"><div class="card-icon">🩹</div><h3>الحديد والأنيميا</h3><p>مصادر الحديد الغذائية والعوامل التي تؤثر في امتصاصه مع التنبيه لأهمية التشخيص.</p></article>
+      <article class="info-card"><div class="card-icon">💪</div><h3>التغذية والنشاط</h3><p>أساسيات التغذية المرتبطة بالنشاط البدني والتعافي وبناء العادات الصحية.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tools">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-tag">أدوات مجانية</span>
+      <h2>حاسبات غذائية تعمل مباشرة</h2>
+      <p>النتائج تقديرية للتثقيف وليست تشخيصًا طبيًا.</p>
+    </div>
+
+    <div class="tools-grid">
+      <div class="tool-card">
+        <h3>حاسبة BMI</h3>
+        <div class="form-row">
+          <label>الوزن (كجم)<input id="bmiWeight" type="number" min="1" placeholder="75"></label>
+          <label>الطول (سم)<input id="bmiHeight" type="number" min="1" placeholder="175"></label>
+        </div>
+        <button class="btn btn-primary full" onclick="calcBMI()">احسب BMI</button>
+        <div class="result" id="bmiResult">أدخل بياناتك ثم اضغط احسب.</div>
+      </div>
+
+      <div class="tool-card">
+        <h3>احتياج السعرات التقريبي</h3>
+        <div class="form-row">
+          <label>العمر<input id="calAge" type="number" min="10" max="100" placeholder="30"></label>
+          <label>الوزن (كجم)<input id="calWeight" type="number" min="1" placeholder="75"></label>
+          <label>الطول (سم)<input id="calHeight" type="number" min="50" placeholder="175"></label>
+          <label>الجنس
+            <select id="calSex"><option value="male">ذكر</option><option value="female">أنثى</option></select>
+          </label>
+        </div>
+        <label>مستوى النشاط
+          <select id="activity">
+            <option value="1.2">قليل الحركة</option>
+            <option value="1.375">نشاط خفيف</option>
+            <option value="1.55">نشاط متوسط</option>
+            <option value="1.725">نشاط مرتفع</option>
+          </select>
+        </label>
+        <button class="btn btn-primary full" onclick="calcCalories()">احسب السعرات</button>
+        <div class="result" id="calResult">أدخل البيانات ثم اضغط احسب.</div>
+      </div>
+
+      <div class="tool-card">
+        <h3>احتياج البروتين التقريبي</h3>
+        <label>الوزن (كجم)<input id="proteinWeight" type="number" min="1" placeholder="75"></label>
+        <label>الهدف
+          <select id="proteinGoal">
+            <option value="0.8">شخص بالغ قليل النشاط — 0.8 جم/كجم</option>
+            <option value="1.2">نشاط بدني — 1.2 جم/كجم</option>
+            <option value="1.6">تدريب مقاومة — 1.6 جم/كجم</option>
+          </select>
+        </label>
+        <button class="btn btn-primary full" onclick="calcProtein()">احسب البروتين</button>
+        <div class="result" id="proteinResult">أدخل الوزن ثم اضغط احسب.</div>
+      </div>
+
+      <div class="tool-card">
+        <h3>احتياج الماء التقريبي</h3>
+        <label>الوزن (كجم)<input id="waterWeight" type="number" min="1" placeholder="75"></label>
+        <button class="btn btn-primary full" onclick="calcWater()">احسب الماء</button>
+        <div class="result" id="waterResult">أدخل الوزن ثم اضغط احسب.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="articles">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-tag">المقالات</span>
+      <h2>نصائح غذائية مختصرة</h2>
+    </div>
+    <div class="article-grid" id="articlesGrid"></div></article>
+      <article class="article-card"><img src="assets/article-water.svg" alt=""><div><span>ترطيب</span><h3>الماء والعادات اليومية</h3><p>احتياجات السوائل تختلف حسب الظروف والنشاط والطقس؛ اجعل شرب الماء عادة منتظمة.</p></div></article>
+      <article class="article-card"><img src="assets/article-sugar.svg" alt=""><div><span>توعية</span><h3>السكر المضاف</h3><p>تعرف على الفرق بين السكريات الطبيعية والمضافة، واقرأ الملصق الغذائي بوعي.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container narrow"><div id="faqList"></div>
+    <div class="section-heading">
+      <span class="section-tag">FAQ</span>
+      <h2>الأسئلة الشائعة</h2>
+    </div>
+    
+    
+    
+    
+  </div>
+</section>
+
+<section class="disclaimer">
+  <div class="container disclaimer-box">
+    <h3>تنبيه طبي مهم</h3><p id="disclaimerText"></p>
+  </div>
+</section>
+
+<section class="section contact-section" id="contact">
+  <div class="container contact-card">
+    <div>
+      <span class="section-tag">تواصل معنا</span>
+      <h2>هل لديك سؤال غذائي؟</h2>
+      <p>استبدل بيانات الاتصال التالية ببياناتك الحقيقية قبل نشر الموقع رسميًا.</p>
+    </div>
+    <div class="contact-actions">
+      <a class="btn btn-primary" id="emailLink" href="#">✉ البريد الإلكتروني</a>
+      <a class="btn btn-light" id="whatsappLink" href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="brand footer-brand"><span class="brand-mark">DA</span><span><b id="brandDoctor">Dr.Ayman</b><small id="brandSite">Nutritionist</small></span></div>
+      <p>منصة مجانية للتثقيف الغذائي والتغذية العلاجية.</p>
+    </div>
+    <div>
+      <h4>روابط سريعة</h4>
+      <a href="#conditions">التغذية العلاجية</a>
+      <a href="#tools">الحاسبات</a>
+      <a href="#articles">المقالات</a>
+    </div>
+    <div>
+      <h4>معلومات</h4>
+      <a href="#faq">الأسئلة الشائعة</a>
+      <a href="#contact">تواصل معنا</a>
+      <a href="#home">العودة للأعلى ↑</a>
+    </div>
+  </div>
+  <div class="copyright" id="copyright"></div>
+</footer>
+
+<script src="site-data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
